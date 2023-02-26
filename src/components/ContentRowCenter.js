@@ -1,20 +1,22 @@
 import React from 'react';
 import LastMovieInDb from './LastMovieInDb';
 import GenresInDb from './GenresInDb';
+import LastUsers from './LastUsers';
 
-function ContentRowCenter(){
-    return (
-        <div className="row">
-            
-            {/*<!-- Last Movie in DB -->*/}
-            <LastMovieInDb />
-            {/*<!-- End content row last movie in Data Base -->*/}
+function ContentRowCenter() {
+  return (
+    <div className="row">
+      {/*<!-- Last Movie in DB -->*/}
+      <LastUsers />
 
-            {/*<!-- Genres in DB -->*/}
-            <GenresInDb />
+      {/*<!-- End content row last movie in Data Base -->*/}
 
-        </div>
-    )
+      {/*<!-- Genres in DB -->*/}
+
+      <GenresInDb />
+      <LastMovieInDb />
+    </div>
+  );
 }
 
 export default ContentRowCenter;

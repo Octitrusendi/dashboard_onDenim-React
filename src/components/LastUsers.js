@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserRow from './UserRow';
 
-class AllUsers extends Component {
+class LastUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,7 +56,7 @@ class AllUsers extends Component {
     } */
 
     return (
-      <div className="col-lg-10 mt-5 mb-4">
+      <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h5 className="m-0 font-weight-bold text-gray-800">
@@ -73,7 +73,7 @@ class AllUsers extends Component {
                   width="100%"
                   cellSpacing="0"
                 >
-                                    <thead>
+                  <thead>
                         <th>ID</th>
                         <th>Avatar</th>
                         <th>Nombre</th>
@@ -81,17 +81,17 @@ class AllUsers extends Component {
 
                   </thead>
                   <tbody>
-                    {this.state.stringUsers.map((unUser, i) => {
+                    {this.state.stringUsers.slice(0, 2).map((unUser, i) => {
                       return <UserRow {...unUser} key={i} />;
                     })}
                   </tbody>
-
+                  {/*               {contenido} */}
                 </table>
               </div>
             </div>
 
-            <Link to="#" className="btn btn-warning">
-            Cantidad total de usuarios: {this.state.stringUsers.length}
+            <Link to="/AllUsers" className="btn btn-warning">
+              Ver más
             </Link>
             {/* <a target="_blank" rel="nofollow" href="/">Cantidad total de usuarios: {this.state.stringUsers.length}</a> */}
           </div>
@@ -101,4 +101,4 @@ class AllUsers extends Component {
   }
 }
 
-export default AllUsers;
+export default LastUsers;
