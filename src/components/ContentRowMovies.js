@@ -1,50 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SmallCard from './SmallCard';
 
-/*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+class Cards extends Component {
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
+    constructor(props){
+        super(props);
+        this.state = {
+            cards :[]
+        }
+    }
 
-/* <!-- Total awards --> */
+    componentDidMount(){
+        fetch('http://localhost:3001/api/cards')
+        .then(res => res.json())
+        .then(res=>{
+            this.setState({
+                cards: res.data
+            })
+        })
+    }
 
-let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
 
-/* <!-- Actors quantity --> */
-
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
-
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
-
-function ContentRowMovies(){
-    return (
+    render(){
+        return (
     
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
+            <div className="row">
+                
+                {this.state.cards.map((card,i)=>{
+                    return (
+                     <SmallCard key={i}{...card}/>
+                    );
+                })}
+    
+            </div>
+        )
+    }
 
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
-        </div>
-    )
 }
 
-export default ContentRowMovies;
+export default Cards;
