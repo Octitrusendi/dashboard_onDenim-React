@@ -1,32 +1,7 @@
 import React, { Component } from 'react';
 import ProductRow from './ProductRow';
 
-class AllProducts extends Component {
-  constructor() {
-    super();
-    this.state = {
-      products: [],
-      cantidad: 0,
-    };
-  }
-  componentDidMount() {
-    fetch('http://localhost:3001/api/allProducts')
-      .then(res => res.json())
-      .then(respuesta => {
-        this.setState({
-          products: respuesta.data,
-          cantidad: respuesta.meta.cuantity,
-        });
-      });
-  }
-  render() {
-    return (
-      <div className="col-lg-10 mt-5 ">
-        <div className="card shadow mb-4">
-          <div className="card-header py-3">
-            <h5 className="m-0 font-weight-bold text-gray-800">
-              Todos los productos | Total: {this.state.cantidad}
-            </h5>
+
           </div>
           <div className="card-body">
             <div className="table-responsive">
