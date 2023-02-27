@@ -10,7 +10,16 @@ class Categories extends Component {
       cantidad: '',
     };
   }
- 
+  componentDidMount() {
+    fetch('http://localhost:3001/api/categories')
+      .then(res => res.json())
+      .then(respuesta => {
+        this.setState({
+          categories: respuesta.data,
+          cantidad: respuesta.meta.totalItems,
+        });
+      });
+  }
   render() {
     return (
       <div className="col-lg-6 mb-4">
