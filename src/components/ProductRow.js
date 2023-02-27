@@ -36,7 +36,22 @@ function ProductRow(props) {
         >
           <i className="fas fa-eye"></i>
         </a>
+        <a className='btn btn-warning mt-1'
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href={`http://localhost:3001/productos/editar/${props.id}`}
+        >
+          <i className="fas fa-edit"></i>
+        </a>
+        <a className='btn btn-danger mt-1'
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href={`http://localhost:3001/api/productos/delete/${props.id}`}
+        >
+          <i className="fas fa-trash"></i>
+        </a>
       </td>
+      
     </tr>
   );
 }

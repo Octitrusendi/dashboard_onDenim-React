@@ -49,7 +49,7 @@ class AllProducts extends Component {
                     <th>Categoria</th>
                     <th>Total vendidos</th>
                     <th>Monto vendido</th>
-                    <th>Ver</th>
+                    <th></th>
                   </tr>
                 </thead>
 
