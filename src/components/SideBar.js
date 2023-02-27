@@ -60,6 +60,16 @@ function SideBar(){
                         <i className="fas fa-fw fa-table"></i>
                         <span>Tables</span></Link>
                 </li>
+                                {/*<!-- Nav Item - Tables -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/AllUsers">
+                        <i className="fas fa-user-check"></i>
+                        <span>Todos los Usuarios</span></Link>
+                </li>
+
+                {/*<!-- Divider -->*/}
+                <hr className="sidebar-divider d-none d-md-block"/>
+            </ul>
             {/*<!-- End of Sidebar -->*/}
 
             {/*<!-- Microdesafio 1 -->*/}
