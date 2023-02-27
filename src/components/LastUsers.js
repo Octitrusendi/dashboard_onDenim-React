@@ -78,6 +78,7 @@ class LastUsers extends Component {
                         <th>Avatar</th>
                         <th>Nombre</th>
                         <th>Email</th>
+                        <td>Cantidad de Compras	</td>
                         <th>Rol</th>
                   </thead>
                   <tbody>

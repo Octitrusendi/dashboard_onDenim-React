@@ -14,7 +14,7 @@ class AllProducts extends Component {
       .then(res => res.json())
       .then(respuesta => {
         this.setState({
-          products: respuesta.data.jean,
+          products: respuesta.data,
           cantidad: respuesta.meta.cuantity,
         });
       });
@@ -47,6 +47,8 @@ class AllProducts extends Component {
                     <th>Talles</th>
                     <th>¿New Collection?</th>
                     <th>Categoria</th>
+                    <th>Total vendidos</th>
+                    <th>Monto vendido</th>
                     <th>Ver</th>
                   </tr>
                 </thead>

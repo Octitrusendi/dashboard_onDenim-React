@@ -25,7 +25,9 @@ function ProductRow(props) {
           <i className="fas fa-times"></i>
         )}
       </td>
-      <td>{props.categoria.name}</td>
+      <td>{props.categoria}</td>
+      <td>{props.order}</td>
+      <td>${toThousand(props.montoVendido)}</td>
       <td>
         <a className='btn btn-success'
           target="_blank"

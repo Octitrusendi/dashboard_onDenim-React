@@ -20,7 +20,9 @@ function UserRow(props) {
       </td>
       <td>{props.fullName}</td>
       <td>{props.email}</td>
+      <td>{props.totalCompras}</td>
       {rol}
+
     </tr>
   );
 }

@@ -1,23 +1,25 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import '../assets/css/style.css';
+import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
 import ContentRowMovies from './ContentRowMovies';
 import AllUsers from './AllUsers';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 import AllProducts from './AllProducts';
+import Categories from './Categories';
+
 
 function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-sidebar sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="img" src={image} alt="Ondenim"/>
                     </div>
                 </a>
 
@@ -28,7 +30,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - On Denim</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -39,9 +41,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/Categories">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categorias</span>
                     </Link>
                 </li>
 
@@ -90,8 +92,8 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/Categories">
+                    <Categories />
                 </Route>
                 <Route path="/AllProducts">
                     <AllProducts />
