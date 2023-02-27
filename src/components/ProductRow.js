@@ -3,6 +3,7 @@ import React from 'react';
 function ProductRow(props) {
   const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   let finalPrice = props.price - (props.price * props.sale) / 100;
+  let montoVendido = (props.price * props.order)
   return (
     <tr>
       <td>{props.id}</td>
@@ -27,7 +28,7 @@ function ProductRow(props) {
       </td>
       <td>{props.categoria}</td>
       <td>{props.order}</td>
-      <td>${toThousand(props.montoVendido)}</td>
+      <td>${toThousand(montoVendido)}</td>
       <td>
         <a className='btn btn-success'
           target="_blank"
