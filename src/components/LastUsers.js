@@ -78,7 +78,7 @@ class LastUsers extends Component {
                         <th>Avatar</th>
                         <th>Nombre</th>
                         <th>Email</th>
-
+                        <th>Rol</th>
                   </thead>
                   <tbody>
                     {this.state.stringUsers.slice(0, 2).map((unUser, i) => {
@@ -90,7 +90,7 @@ class LastUsers extends Component {
               </div>
             </div>
 
-            <Link to="/AllUsers" className="btn btn-warning">
+            <Link to="/AllUsers" className="btn btn-success">
               Ver más
             </Link>
             {/* <a target="_blank" rel="nofollow" href="/">Cantidad total de usuarios: {this.state.stringUsers.length}</a> */}

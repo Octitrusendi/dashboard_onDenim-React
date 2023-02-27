@@ -2,11 +2,11 @@ import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
 import AllUsers from './AllUsers';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+import AllProducts from './AllProducts';
 
 function SideBar(){
     return(
@@ -47,9 +47,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                    <Link className="nav-link" to="/AllProducts">
+                        <i className="fas fa-shopping-cart"></i>
+                        <span>Todos los Productos</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
@@ -93,8 +93,8 @@ function SideBar(){
                 <Route path="/GenresInDb">
                     <GenresInDb />
                 </Route>
-                <Route path="/LastMovieInDb">
-                    <LastMovieInDb />
+                <Route path="/AllProducts">
+                    <AllProducts />
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />

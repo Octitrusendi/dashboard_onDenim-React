@@ -78,7 +78,7 @@ class AllUsers extends Component {
                         <th>Avatar</th>
                         <th>Nombre</th>
                         <th>Email</th>
-
+                        <th>Rol</th>
                   </thead>
                   <tbody>
                     {this.state.stringUsers.map((unUser, i) => {
