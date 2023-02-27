@@ -8,6 +8,7 @@ import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 import AllProducts from './AllProducts';
 import Categories from './Categories';
+import AllSales from './AllSales';
 
 
 function SideBar(){
@@ -56,9 +57,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowMovies">
+                <Link className="nav-link" to="/AllSales">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Ventas</span></Link>
                 </li>
                                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
@@ -97,6 +98,9 @@ function SideBar(){
                 </Route>
                 <Route path="/AllProducts">
                     <AllProducts />
+                </Route>
+                <Route path="/AllSales">
+                    <AllSales />
                 </Route>
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies />

@@ -2,6 +2,7 @@ import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
+import LastSales from './LastSales';
 function ContentWrapper(){
     return (
         <React.Fragment>
@@ -11,6 +12,7 @@ function ContentWrapper(){
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
+                    <LastSales />
                     <Footer />
                 </div>
             </div>    
