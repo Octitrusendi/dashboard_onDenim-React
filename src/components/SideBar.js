@@ -3,7 +3,7 @@ import '../assets/css/style.css';
 import image from '../assets/images/logo.png';
 import ContentWrapper from './ContentWrapper';
 import ContentRowProducts from './ContentRowProducts';
-import AllUsers from './AllUsers';
+import AllUsers from './allUsers';
 import NotFound from './NotFound';
 import { Link, Route, Switch } from 'react-router-dom';
 import AllProducts from './AllProducts';
