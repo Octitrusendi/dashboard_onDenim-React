@@ -30,7 +30,7 @@ function ProductRow(props) {
       <td>{props.paymentMethod}</td>
       <td>{props.shippingMethod}</td>
       <td>{moment(props.createdAt).format('DD/MM/YYYY, h:mm a')}</td>
-
+        
     </tr>
   );
 }

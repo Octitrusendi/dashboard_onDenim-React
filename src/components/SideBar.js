@@ -127,7 +127,9 @@ function SideBar() {
           <Contact />
         </Route>
         <Route component={NotFound} />
+        
       </Switch>
+
       {/*<!-- End Microdesafio 2 -->*/}
     </React.Fragment>
   );

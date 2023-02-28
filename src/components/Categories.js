@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Category from './Category';
-
+import { useState, useEffect } from 'react';
+import { Link, Route, Switch } from 'react-router-dom';
+import DetailCategory from './DetailCategory';
 
 class Categories extends Component {
   constructor() {
@@ -33,9 +35,17 @@ class Categories extends Component {
             <div className="row">
               {this.state.categories.map((category, i) => (
                 <div className="col-6mb-2" key={i}>
-                  <Category>
-                    {category.name} ({category.productsCount} productos)
-                  </Category>
+                  <Link to={`Category/${category.id}`}>
+                    <Category>
+                      {category.name} ({category.productsCount} productos)
+                    </Category>
+                  </Link>
+                  <Route
+                    path="/Category/:id"
+                    render={({ match }) => {
+                      return <DetailCategory id={match.params.pais} />;
+                    }}
+                  />
                 </div>
               ))}
             </div>
