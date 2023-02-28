@@ -79,6 +79,7 @@ class LastUsers extends Component {
                         <th>Nombre</th>
                         <th>Email</th>
                         <td>Cantidad de Compras	</td>
+                        <th>Total Gastado</th>
                         <th>Rol</th>
                   </thead>
                   <tbody>

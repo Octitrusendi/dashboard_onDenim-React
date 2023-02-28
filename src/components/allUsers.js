@@ -7,6 +7,7 @@ class AllUsers extends Component {
     super(props);
     this.state = {
       stringUsers: [],
+      cantidad: 0,
     };
   }
 
@@ -26,6 +27,7 @@ class AllUsers extends Component {
   mostrarUsuarios = data => {
     this.setState({
       stringUsers: data.data,
+      cantidad: data.count,
     });
   };
 
@@ -60,7 +62,7 @@ class AllUsers extends Component {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h5 className="m-0 font-weight-bold text-gray-800">
-              Últimos usuarios registrados
+              Todos los usuarios registrados | Total: {this.state.cantidad}
             </h5>
           </div>
           <div className="card-body">
@@ -73,26 +75,26 @@ class AllUsers extends Component {
                   width="100%"
                   cellSpacing="0"
                 >
-                                    <thead>
-                        <th>ID</th>
-                        <th>Avatar</th>
-                        <th>Nombre</th>
-                        <th>Email</th>
-                        <th>Cantidad de Compras</th>
-                        <th>Rol</th>
+                  <thead>
+                    <th>ID</th>
+                    <th>Avatar</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Cantidad de Compras</th>
+                    <th>Total Gastado</th>
+                    <th>Rol</th>
                   </thead>
                   <tbody>
                     {this.state.stringUsers.map((unUser, i) => {
                       return <UserRow {...unUser} key={i} />;
                     })}
                   </tbody>
-
                 </table>
               </div>
             </div>
 
             <Link to="#" className="btn btn-warning">
-            Cantidad total de usuarios: {this.state.stringUsers.length}
+              Cantidad total de usuarios: {this.state.stringUsers.length}
             </Link>
             {/* <a target="_blank" rel="nofollow" href="/">Cantidad total de usuarios: {this.state.stringUsers.length}</a> */}
           </div>

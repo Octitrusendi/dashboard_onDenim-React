@@ -22,7 +22,7 @@ class LastSales extends Component {
   }
   render() {
     return (
-      <div className="col-lg-12 ">
+      <div className="col-lg-12 mb-4">
         <div className="card shadow h-100 mb-4">
           <div className="card-header py-3">
             <h5 className="m-0 font-weight-bold text-gray-800">
@@ -45,7 +45,7 @@ class LastSales extends Component {
                     <th>Productos comprados</th>
                     <th>Cantidades</th>
                     <th>Precio Unitario</th>
-                    <th>Precio Final</th>
+                    <th>Total Venta</th>
                     <th>Método de Pago</th>
                     <th>Método de Envio</th>
                     <th>Fecha de compra</th>

@@ -44,7 +44,7 @@ class AllSales extends Component {
                     <th>Productos comprados</th>
                     <th>Cantidades</th>
                     <th>Precio Unitario</th>
-                    <th>Precio Final</th>
+                    <th>Total Venta</th>
                     <th>Método de Pago</th>
                     <th>Método de Envio</th>
                     <th>Fecha de compra</th>

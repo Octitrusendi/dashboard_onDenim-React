@@ -1,7 +1,18 @@
-.img{
-        width: 50%;;
+.img {
+  width: 50%;
 }
 
-.bg-sidebar{
-        background-color: #2A3D4C !important;
+.bg-sidebar {
+  background-color: #2a3d4c !important;
+}
+
+a:hover {
+  color: none !important;
+  text-decoration: none !important;
+}
+.tarjetas {
+  transition: all cubic-bezier(0.23, 1, 0.32, 1);
+}
+.tarjetas:hover {
+  transform: scale(1.01);
 }

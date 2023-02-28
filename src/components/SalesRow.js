@@ -26,7 +26,7 @@ function ProductRow(props) {
           <tr key={`producto ${i}`}>${toThousand(producto.price)}</tr>
         ))}
       </td>
-      <td>${toThousand(props.total)}</td>
+      <td>${toThousand(Number(props.total))}</td>
       <td>{props.paymentMethod}</td>
       <td>{props.shippingMethod}</td>
       <td>{moment(props.createdAt).format('DD/MM/YYYY, h:mm a')}</td>

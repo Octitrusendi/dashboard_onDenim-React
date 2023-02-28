@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import ProductRow from './ProductRow';
+import ContactRow from './ContactRow';
 
-class AllProducts extends Component {
+class Contact extends Component {
   constructor() {
     super();
     this.state = {
-      products: [],
+      contactos: [],
       cantidad: 0,
     };
   }
   componentDidMount() {
-    fetch('http://localhost:3001/api/allProducts')
+    fetch('http://localhost:3001/api/contact')
       .then(res => res.json())
       .then(respuesta => {
         this.setState({
-          products: respuesta.data,
-          cantidad: respuesta.meta.cuantity,
+          contactos: respuesta.data.contacto,
+          cantidad: respuesta.meta.totalContactos,
         });
       });
   }
@@ -25,7 +25,7 @@ class AllProducts extends Component {
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h5 className="m-0 font-weight-bold text-gray-800">
-              Todos los productos | Total: {this.state.cantidad}
+              Solicitudes de contacto | Total: {this.state.cantidad}
             </h5>
           </div>
           <div className="card-body">
@@ -39,24 +39,15 @@ class AllProducts extends Component {
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Nombre del Producto</th>
-                    <th>Descripcion</th>
-                    <th>Precio sin descuento</th>
-                    <th>Descuento</th>
-                    <th>Precio Final</th>
-                    <th>Talles</th>
-                    <th>Stock</th>
-                    <th>¿New Collection?</th>
-                    <th>Categoria</th>
-                    <th>Total vendidos</th>
-                    <th>Monto vendido</th>
-                    <th></th>
+                    <th>Email de contacto</th>
+                    <th>Consulta</th>
+                    <th>Fecha de contacto</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {this.state.products.map((product, i) => (
-                    <ProductRow key={i} {...product} />
+                  {this.state.contactos.map((contacto, i) => (
+                    <ContactRow key={i} {...contacto} />
                   ))}
                 </tbody>
               </table>
@@ -67,4 +58,4 @@ class AllProducts extends Component {
     );
   }
 }
-export default AllProducts;
+export default Contact;

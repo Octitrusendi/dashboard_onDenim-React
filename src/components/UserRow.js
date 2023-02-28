@@ -1,6 +1,7 @@
 import React from 'react';
 
 function UserRow(props) {
+  const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   let rol;
   if (props.id_level === 1) {
     rol = <td>Admin</td>;
@@ -21,6 +22,7 @@ function UserRow(props) {
       <td>{props.fullName}</td>
       <td>{props.email}</td>
       <td>{props.totalCompras}</td>
+      <td>${toThousand(props.order)}</td>
       {rol}
 
     </tr>
